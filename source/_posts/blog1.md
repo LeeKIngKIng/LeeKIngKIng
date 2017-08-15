@@ -10,7 +10,7 @@ gitPage: 一个可供浏览器访问的静态网页存储空间
 
 登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。
 
-![pic1](../img/pic1.png)
+{% asset_img pic1.png pic1 %}
 
 Repository name需使用自己的用户名，并且名字必须符合这样的规则username.github.io；
 其它默认，之后再勾选下面的"Initialize this repository with a README"；
