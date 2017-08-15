@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>usingHexo | Hexo</title>
+  <title>利用 hexo + Gitpage 开发自己的博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="usingHexo">
+  <meta name="description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 环境准备安装Node和Git安装步骤1.安装Hexo1npm install hexo-cli -g 2.创建hexo工程1hexo init blog 创建了一个文件夹blog（此处blog换成你自己想要的名字） 3.运行hexo服务器123cd blog	(进入blog目录)npm install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 hexo + Gitpage 开发自己的博客">
 <meta property="og:url" content="http://yoursite.com/2017/08/15/usingHexo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-08-15T01:58:40.134Z">
+<meta property="og:description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 环境准备安装Node和Git安装步骤1.安装Hexo1npm install hexo-cli -g 2.创建hexo工程1hexo init blog 创建了一个文件夹blog（此处blog换成你自己想要的名字） 3.运行hexo服务器123cd blog	(进入blog目录)npm install">
+<meta property="og:updated_time" content="2017-08-15T04:05:21.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="usingHexo">
+<meta name="twitter:title" content="利用 hexo + Gitpage 开发自己的博客">
+<meta name="twitter:description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 环境准备安装Node和Git安装步骤1.安装Hexo1npm install hexo-cli -g 2.创建hexo工程1hexo init blog 创建了一个文件夹blog（此处blog换成你自己想要的名字） 3.运行hexo服务器123cd blog	(进入blog目录)npm install">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -49,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -74,7 +77,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      usingHexo
+      利用 hexo + Gitpage 开发自己的博客
     </h1>
   
 
@@ -82,27 +85,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>gitPage: 一个可供浏览器访问的静态网页存储空间<br><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>: 一个快速，简单和强大的博客框架</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h4 id="安装Node和Git"><a href="#安装Node和Git" class="headerlink" title="安装Node和Git"></a>安装Node和Git</h4><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h4 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<h4 id="2-创建hexo工程"><a href="#2-创建hexo工程" class="headerlink" title="2.创建hexo工程"></a>2.创建hexo工程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure>
+<p>创建了一个文件夹blog（此处blog换成你自己想要的名字）</p>
+<h4 id="3-运行hexo服务器"><a href="#3-运行hexo服务器" class="headerlink" title="3.运行hexo服务器"></a>3.运行hexo服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd blog	(进入blog目录)</div><div class="line">npm install	(安装依赖文件)</div><div class="line">hexo server	(可简写为hexo s)</div></pre></td></tr></table></figure>
+<p>hexo服务器地址为命令行提示的地址，一般是<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+<h4 id="4-生成静态文件"><a href="#4-生成静态文件" class="headerlink" title="4.生成静态文件"></a>4.生成静态文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate	(可简写为hexo g)</div></pre></td></tr></table></figure>
+<p>编译后，会出现一个 public 文件夹，将所有的md文件编译成html文件</p>
+<h4 id="5-部署博客到服务器"><a href="#5-部署博客到服务器" class="headerlink" title="5.部署博客到服务器"></a>5.部署博客到服务器</h4><p>首先要命令行返回到blog目录，按ctrl+c，之后输入y即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy	(可简写为hexo d)</div></pre></td></tr></table></figure></p>
+<p>这一步之后各种报错各种坑，后来在家里的手提解决了，然后第二天回公司台式又崩了。还是不纠结了，放弃hexo d，直接使用我一直在用的TortoiseGit提交代码了,其实就是把hexo g编译后的public文件夹代码进行复制粘贴。（有空有兴趣的同学也可以去踩下坑…）</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/15/usingHexo/" data-id="cj6cymlmf0001i4vdywscig5u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/15/usingHexo/" data-id="cj6d2ao6p0000q0vd0mx73t4v" class="article-share-link">Partager</a>
       
       
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2017/08/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -130,16 +133,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/08/15/usingHexo/">usingHexo</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/15/hello-world/">Hello World</a>
+            <a href="/2017/08/15/usingHexo/">利用 hexo + Gitpage 开发自己的博客</a>
           </li>
         
       </ul>
@@ -155,7 +154,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
