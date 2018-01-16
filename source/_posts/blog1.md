@@ -1,7 +1,7 @@
 ---
 title: 利用 gitPage + hexo 开发自己的博客
 date: 2017-08-15 09:58:40
-tags:
+tags: "Hexo"
 ---
 gitPage: 一个可供浏览器访问的静态网页存储空间
 [Hexo](https://hexo.io/): 一个快速，简单和强大的博客框架
@@ -9,8 +9,8 @@ gitPage: 一个可供浏览器访问的静态网页存储空间
 ### 创建gitPage
 
 登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。
-
-{% asset_img pic1.png pic1 %}
+<!-- more -->
+{% asset_img pic1.png %}
 
 Repository name需使用自己的用户名，并且名字必须符合这样的规则username.github.io；
 其它默认，之后再勾选下面的"Initialize this repository with a README"；
@@ -55,6 +55,6 @@ hexo deploy	(可简写为hexo d)
 
 ### 新建博文
 ```
-hexo new "blog-name"
+hexo new "文件名"
 ```
-即可在 Hexo\source\ _posts 目录中找到"blog-name.md"这个文件。你就可以使用makedown编辑器打开进行编写博客内容了。
+即可在 Hexo\source\ _posts 目录中找到"文件名.md"这个文件。你就可以使用makedown编辑器打开进行编写博客内容了。
