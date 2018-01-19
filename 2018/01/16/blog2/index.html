@@ -102,7 +102,8 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2018/01/16/blog2/pic1.gif">
 <meta property="og:image" content="http://yoursite.com/2018/01/16/blog2/qrcode.png">
-<meta property="og:updated_time" content="2018-01-16T09:30:59.587Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/16/blog2/show.png">
+<meta property="og:updated_time" content="2018-01-18T12:13:42.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="年终总结">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/16/blog2/pic1.gif">
@@ -347,6 +348,10 @@
 <p>还能利用currenttime控制交互按钮和css3动画出现的时机，值得注意的是android的currenttime相比ios会有误差，需要另外调试视频以实际数据为准。</p>
 <p>最后一个视频由于需要在某一时间段内循环播放，而ios9是不支持视频静音的，所以需要把音频提取出来放进一个audio标签中跟视频同步播放。</p>
 <h3 id="小游戏交互"><a href="#小游戏交互" class="headerlink" title="小游戏交互"></a>小游戏交互</h3><p>开始是使用陀螺仪控制画面左右移动的，会更有趣味。后来客户需要更简单的交互，就改成滑动了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">var width=parseInt($(&apos;.bg&apos;).width());</div><div class="line">var distanceX=0;</div><div class="line">var delta;</div><div class="line"></div><div class="line">$(&apos;#main&apos;).on(&apos;touchstart&apos;,function(e)&#123;</div><div class="line">    delta = e.targetTouches[0].pageX - distanceX;</div><div class="line">&#125;);</div><div class="line">var action=function(e)&#123;</div><div class="line">    var newDistanceX =  e.targetTouches[0].pageX - delta;</div><div class="line">    //判断滑动的方向以及背景画面的边界</div><div class="line">    if((newDistanceX&gt;0 &amp;&amp; newDistanceX&lt;width/2-20) || (newDistanceX&lt;0&amp;&amp; newDistanceX&gt;-width/2/3*2+20))&#123;</div><div class="line">    	//记录上次位移</div><div class="line">        distanceX = newDistanceX;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">$(&apos;#main&apos;).on(&apos;touchmove&apos;,action)</div><div class="line"></div><div class="line">var requestFrame = window.requestAnimationFrame ||</div><div class="line">    window.webkitRequestAnimationFrame ||</div><div class="line">    window.mozRequestAnimationFrame    ||</div><div class="line">    window.oRequestAnimationFrame      ||</div><div class="line">    window.msRequestAnimationFrame     ||</div><div class="line">    function(callback) &#123;</div><div class="line">        window.setTimeout(callback, 1000 / 60);</div><div class="line">    &#125;;</div><div class="line">var step=function()&#123;</div><div class="line">    $(&apos;.bg&apos;).css(&apos;-webkit-transform&apos;,&apos;translate(&apos;+distanceX+&apos;px,0)&apos;);</div><div class="line">    animationFrameId=requestFrame(step);</div><div class="line">    if(enough.length===5)&#123;</div><div class="line">        $(&apos;#main&apos;).off(&apos;touchmove&apos;,action);</div><div class="line">        cancelAnimationFrame(animationFrameId)</div><div class="line">        $(&apos;.bg&apos;).css(&apos;-webkit-transform&apos;,&apos;translate(0,0)&apos;);</div><div class="line">        $(&apos;.finalFrame&apos;).show();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">requestFrame(step);</div></pre></td></tr></table></figure></p>
+<h2 id="《梦幻西游》手游武神坛PC端："><a href="#《梦幻西游》手游武神坛PC端：" class="headerlink" title="《梦幻西游》手游武神坛PC端："></a>《梦幻西游》手游武神坛PC端：</h2><p>该项目需要较多数据返回，需要逻辑清晰地分批处理好，如对function的命名，相似功能的function归到一个对象里面，方便查找和日后修改迭代。</p>
+<p>另外还要做好返回数据类型的判断，以免造成代码阻塞，也方便查错。</p>
+<img src="/2018/01/16/blog2/show.png" alt="show.png" title="">
+<p>项目中也有较多像这样的下拉列表，要注意代码的复用。</p>
 <h2 id="过往项目中遇到的一些问题："><a href="#过往项目中遇到的一些问题：" class="headerlink" title="过往项目中遇到的一些问题："></a>过往项目中遇到的一些问题：</h2><p>1.注意返回结果是字符串还是数值，减法运算可以正常运行，而加法就变成合并字符串了。<br>2.ios上的body的overflow：hidden无效，还是会滚动。解决方法是加上position：fixed，可是这个会造成页面跳到顶端。<br>3.移动嵌套直播使用iframe,用video需要m3u8格式。<br>4.网易组件galleryv2的slidesPerView设置个数与元素个数相等时会出现bug，元素个数会变成double。<br>5.元素display属性为none时，会导致swiper初始化出现问题。<br>6.宽高的rem值为奇数时有些机型可能会相差1像素导致缺了一边框。<br>7.$(document).on(‘click’,function(){}) 在iphone上不触发事件。解决方法是给document元素添加css :cursor:pointer;或者改为touch事件。<br>8.注意ie7、8的性能问题，有时代码执行需设在setTimeout中。<br>9.position设置定位才能触发z-index。</p>
 
       
@@ -387,6 +392,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/17/blog3/" rel="prev" title="个人分享">
+                个人分享 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -463,7 +472,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -476,7 +485,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -511,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#魂斗罗独立项目："><span class="nav-number">1.</span> <span class="nav-text">魂斗罗独立项目：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#音频播放"><span class="nav-number">1.1.</span> <span class="nav-text">音频播放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H5视频交互"><span class="nav-number">1.2.</span> <span class="nav-text">H5视频交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小游戏交互"><span class="nav-number">1.3.</span> <span class="nav-text">小游戏交互</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过往项目中遇到的一些问题："><span class="nav-number">2.</span> <span class="nav-text">过往项目中遇到的一些问题：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#魂斗罗独立项目："><span class="nav-number">1.</span> <span class="nav-text">魂斗罗独立项目：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#音频播放"><span class="nav-number">1.1.</span> <span class="nav-text">音频播放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H5视频交互"><span class="nav-number">1.2.</span> <span class="nav-text">H5视频交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小游戏交互"><span class="nav-number">1.3.</span> <span class="nav-text">小游戏交互</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#《梦幻西游》手游武神坛PC端："><span class="nav-number">2.</span> <span class="nav-text">《梦幻西游》手游武神坛PC端：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过往项目中遇到的一些问题："><span class="nav-number">3.</span> <span class="nav-text">过往项目中遇到的一些问题：</span></a></li></ol></div>
             
 
           </div>

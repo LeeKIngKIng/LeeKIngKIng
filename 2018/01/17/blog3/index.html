@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -94,20 +94,21 @@
 
 
 
-<meta name="description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 创建gitPage登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="人生苦短，我用python。">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用 gitPage + hexo 开发自己的博客">
-<meta property="og:url" content="http://yoursite.com/2017/08/15/blog1/index.html">
+<meta property="og:title" content="个人分享">
+<meta property="og:url" content="http://yoursite.com/2018/01/17/blog3/index.html">
 <meta property="og:site_name" content="MLGB">
-<meta property="og:description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 创建gitPage登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。">
+<meta property="og:description" content="人生苦短，我用python。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2017/08/15/blog1/pic1.png">
-<meta property="og:updated_time" content="2017-08-16T10:11:44.760Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/blog3/pic1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/blog3/pic2.jpg">
+<meta property="og:updated_time" content="2018-01-19T02:07:59.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用 gitPage + hexo 开发自己的博客">
-<meta name="twitter:description" content="gitPage: 一个可供浏览器访问的静态网页存储空间Hexo: 一个快速，简单和强大的博客框架 创建gitPage登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/15/blog1/pic1.png">
+<meta name="twitter:title" content="个人分享">
+<meta name="twitter:description" content="人生苦短，我用python。">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/17/blog3/pic1.jpg">
 
 
 
@@ -136,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/15/blog1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/17/blog3/"/>
 
 
 
 
 
-  <title>利用 gitPage + hexo 开发自己的博客 | MLGB</title>
+  <title>个人分享 | MLGB</title>
   
 
 
@@ -269,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/blog1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/blog3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LeeKIngKIng">
@@ -286,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">利用 gitPage + hexo 开发自己的博客</h1>
+          <h1 class="post-title" itemprop="name headline">个人分享</h1>
         
 
         <div class="post-meta">
@@ -298,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-15T09:58:40+08:00">
-                2017-08-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T09:58:26+08:00">
+                2018-01-17
               </time>
             
 
@@ -336,21 +337,15 @@
       
 
       
-        <p>gitPage: 一个可供浏览器访问的静态网页存储空间<br><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>: 一个快速，简单和强大的博客框架</p>
-<h3 id="创建gitPage"><a href="#创建gitPage" class="headerlink" title="创建gitPage"></a>创建gitPage</h3><p>登录github之后点击右上角的“+”号，选择“New repository”菜单，创建仓库，用于存储和博客相关的源文件。<br><a id="more"></a><br><img src="/2017/08/15/blog1/pic1.png" alt="pic1.png" title=""></p>
-<p>Repository name需使用自己的用户名，并且名字必须符合这样的规则username.github.io；<br>其它默认，之后再勾选下面的”Initialize this repository with a README”；<br>最后点击”Create repository”。</p>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>安装<strong>Node</strong>和<strong>Git</strong>    (我的版本分别是v4.4.4和v2.11.0.windows.1，后面略去一万字…)</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<h3 id="创建hexo工程"><a href="#创建hexo工程" class="headerlink" title="创建hexo工程"></a>创建hexo工程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure>
-<p>创建了一个文件夹blog（此处blog换成你自己想要的名字）</p>
-<h3 id="运行hexo服务器"><a href="#运行hexo服务器" class="headerlink" title="运行hexo服务器"></a>运行hexo服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd blog		(进入blog目录)</div><div class="line">npm install	(安装依赖文件)</div><div class="line">hexo server	(可简写为hexo s)</div></pre></td></tr></table></figure>
-<p>hexo服务器地址为命令行提示的地址，一般是<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate	(可简写为hexo g)</div></pre></td></tr></table></figure>
-<p>编译后，会出现一个 public 文件夹，将所有的md文件编译成html文件</p>
-<h3 id="部署博客到服务器"><a href="#部署博客到服务器" class="headerlink" title="部署博客到服务器"></a>部署博客到服务器</h3><p>首先要命令行返回到blog目录，按ctrl+c，之后输入y即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy	(可简写为hexo d)</div></pre></td></tr></table></figure></p>
-<p>这一步之后各种报错各种坑，后来在家里的手提解决了，然后第二天回公司台式又崩了。<br>还是不纠结了，由于一直在使用TortoiseGit，只需要提交hexo g编译后的public文件夹内代码就ok了。（有空有兴趣的同学也可以去踩下坑…）</p>
-<h3 id="新建博文"><a href="#新建博文" class="headerlink" title="新建博文"></a>新建博文</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;文件名&quot;</div></pre></td></tr></table></figure>
-<p>即可在 Hexo\source\ _posts 目录中找到”文件名.md”这个文件。你就可以使用makedown编辑器打开进行编写博客内容了。</p>
+        <p>人生苦短，我用python。<br><img src="/2018/01/17/blog3/pic1.jpg" alt="pic1.jpg" title=""><br><a id="more"></a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>关注python是因为最近网上看到了微信小游戏跳一跳、抢火车票的各种辅助软件、外挂大多都是由python写的，于是挺好奇便对这门语言产生了兴趣。</p>
+<p>网上有很生动的比喻说：<br>汇编能够让你看得很远（了解各种计算机工作原理），但是遇见任何问题都要冲上去肉搏。<br>C语言终于能够发射子弹了…但是你需要自己敲击底火，C语言所有实现都要写，String类型都要自己实现。<br>C++算是一件完整的武器了…但是伤人伤己。<br>python则是全自动战斗机器人，不但能够发射子弹，还能扔枪…<br><img src="/2018/01/17/blog3/pic2.jpg" alt="pic2.jpg" title=""></p>
+<p>Python是一种高级编程语言。完成同一个任务，C语言要写1000行代码，Java只需要写100行，而Python可能只要20行。<br>如批量修改文件名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">movie_name = os.listdir(&apos;test&apos;)</div><div class="line"></div><div class="line">for temp in movie_name:</div><div class="line">	new_name=&apos;666&apos;+temp</div><div class="line">	os.rename(&apos;test/&apos;+temp, &apos;test/&apos;+new_name)</div></pre></td></tr></table></figure></p>
+<p>(copy过来的Python代码要额外注意，不要看起来代码缩进了就感觉ok了，实际上是没有缩进的。)<br>像这样的确可以大大提高工作效率，有兴趣有条件的还可以试着做成拥有GUI的小工具。</p>
+<p>但代码少的代价是运行速度慢，C程序运行1秒钟，Java程序可能需要2秒，而Python程序可能就需要10秒。</p>
+<p>python分为2.X时代和3.X时代，如果是初学者，py3毫不犹豫。<br>python清晰简洁的语法使得非常适合人类阅读，阅读一个良好的Python程序就感觉像是在读英语一样。Python的这种伪代码本质是它最大的优点之一，它使你能够专注于解决问题而不是去搞明白语言本身。<br>而且有极其丰富的库，数学计算三件套：numpy，scipy，matplotlib；数据处理库pandas，深度学习库tensorflow等。</p>
+<p>提及python，当然要说到爬虫，它拥有很多优秀的网络爬虫库。<br>如大名鼎鼎的scrapy爬虫框架。scrapy依赖的库比较多，有lxml,zope.interface,pyOpenSSL,Twisted,pywin32。<br>安装这些库也比较简单，只需用到Python包管理工具Pip就可以了。如在命令行中运行：pip install lxml。<br>由于不同版本安装后包含的库不同，所以有些库就已经存在了。可以先进入python交互模式输入help(“modules”)查看已有的库，当然可以直接一个个install也没多大影响。<br>值得注意的是有些库在pip服务器上没有及时更新，导致不能适用于当前python版本了，就会安装失败，这需要我们去对应库的官网自行下载了。<br>我的python版本为3.6，当时安装twisted和pywin32都是需要去官网下载，pywin32是一个exe安装程序，可以直接安装；而twisted则是一个whl文件，命令行中还是输入”pip install “,然后把文件拖入回车安装即可。所有依赖库装好了就可以安装scrapy了。</p>
+<p>特意附上<a href="http://scrapy-chs.readthedocs.io/zh_CN/latest/" target="_blank" rel="external">scrapy中文文档</a><br>好了，先不说了，我要学着爬点小黄图了，嘻嘻~</p>
 
       
     </div>
@@ -368,7 +363,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -381,15 +376,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/01/16/blog2/" rel="next" title="年终总结">
+                <i class="fa fa-chevron-left"></i> 年终总结
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/16/blog2/" rel="prev" title="年终总结">
-                年终总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -514,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建gitPage"><span class="nav-number">1.</span> <span class="nav-text">创建gitPage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建hexo工程"><span class="nav-number">4.</span> <span class="nav-text">创建hexo工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行hexo服务器"><span class="nav-number">5.</span> <span class="nav-text">运行hexo服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成静态文件"><span class="nav-number">6.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署博客到服务器"><span class="nav-number">7.</span> <span class="nav-text">部署博客到服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建博文"><span class="nav-number">8.</span> <span class="nav-text">新建博文</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
             
 
           </div>
